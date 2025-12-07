@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faYoutube,
-	faTwitter,
+	faXTwitter,
 	faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -12,7 +12,7 @@ export default function SocialIcons() {
 				<FontAwesomeIcon icon={faYoutube} />
 			</a>
 			<a href="#" aria-label="X / Twitter">
-				<FontAwesomeIcon icon={faTwitter} />
+				<FontAwesomeIcon icon={faXTwitter} />
 			</a>
 			<a href="#" aria-label="Instagram">
 				<FontAwesomeIcon icon={faInstagram} />

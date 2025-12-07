@@ -10,7 +10,9 @@ export default function Articles() {
 					<ArticleCard key={article.id} article={article} />
 				))}
 			</div>
-			<a href="/articles">See more articles →</a>
+			<div className="moreArticles">
+				<a href="#">See more articles →</a>
+			</div>
 		</section>
 	);
 }

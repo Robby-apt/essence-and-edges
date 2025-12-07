@@ -3,7 +3,7 @@ import SocialIcons from './SocialIcons';
 export default function About() {
 	return (
 		<div className="aboutMe">
-			<img src="/hero-bg.jpg" alt="My picture" className="myPic" />
+			<img src="/author.jpg" alt="My picture" className="myPic" />
 			<div className="aboutText">
 				<h2>About Me</h2>
 				<p>

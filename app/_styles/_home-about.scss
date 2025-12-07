@@ -1,7 +1,7 @@
 .aboutMe {
 	background-color: $secondary-bg-color;
 	display: flex;
-	width: 60%;
+	width: 65%;
 
 	img {
 		width: 40%;
@@ -44,21 +44,22 @@
 				color: $secondary-bg-color;
 			}
 		}
+	}
+}
 
-		.socialIcons {
-			display: flex;
-			color: $font-color;
-			justify-content: space-around;
-			margin: 1.25rem 0 auto 0;
-			width: 100%;
+// social media icons styles
+.socialIcons {
+	display: flex;
+	color: $font-color;
+	justify-content: space-around;
+	margin: 1.25rem 0 auto 0;
+	width: 100%;
 
-			a {
-				color: $font-color;
-			}
+	a {
+		color: inherit;
+	}
 
-			svg {
-				font-size: 2rem;
-			}
-		}
+	svg {
+		font-size: 2rem;
 	}
 }
