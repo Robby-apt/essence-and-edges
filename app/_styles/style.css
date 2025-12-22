@@ -19,12 +19,32 @@ body {
 
 nav {
   background-color: #f5f1e5;
+  display: flex;
+  justify-content: space-between;
   padding: 0.625rem 0;
   text-align: center;
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
-nav h1 {
+nav .navIcon {
+  display: none;
+  width: 6.25rem;
+}
+nav .navIcon svg {
+  color: #675139;
+  font-size: 2rem;
+  margin: auto;
+}
+nav a {
+  text-decoration: none;
+  margin: auto;
+  padding: 0;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav a h1 {
   color: #675139;
   margin: 0;
   font-size: 4rem;
@@ -33,6 +53,7 @@ nav h1 {
 
 .contentSection {
   display: flex;
+  position: relative;
   margin: 6.5rem 0 0 0;
   width: 100%;
 }
@@ -412,6 +433,19 @@ footer p {
   color: #f5f1e5;
 }
 
+@media (max-width: 1130px) {
+  nav .navIcon {
+    display: flex;
+  }
+  .sideBar {
+    flex-grow: 1;
+    height: 100% !important;
+    position: absolute;
+  }
+  main {
+    width: 100% !important;
+  }
+}
 @media (max-width: 1450px) {
   .mainContent {
     width: 100% !important;

@@ -26,23 +26,48 @@ body {
 
 nav {
 	background-color: $secondary-bg-color;
+	display: flex;
+	justify-content: space-between;
 	padding: 0.625rem 0;
 	text-align: center;
 	position: fixed;
 	width: 100%;
+	z-index: 2;
 
-	h1 {
-		color: $font-color;
-		margin: 0;
-		font-size: 4rem;
-		font-weight: bold;
+	.navIcon {
+		// background-color: aqua;
+		display: none;
+		width: 6.25rem;
+
+		svg {
+			color: $font-color;
+			font-size: 2rem;
+			margin: auto;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		margin: auto;
+		padding: 0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		h1 {
+			color: $font-color;
+			margin: 0;
+			font-size: 4rem;
+			font-weight: bold;
+		}
 	}
 }
 
 // main content styles
 .contentSection {
 	display: flex;
-	// position: fixed;
+	position: relative;
 	margin: 6.5rem 0 0 0;
 	width: 100%;
 }
