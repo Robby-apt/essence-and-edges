@@ -1,0 +1,65 @@
+.aboutMe {
+	background-color: $secondary-bg-color;
+	display: flex;
+	width: 65%;
+
+	img {
+		width: 40%;
+	}
+
+	.aboutText {
+		// background-color: $accent-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+
+		h2 {
+			color: $font-color;
+			font-size: 1.5rem;
+			font-weight: bold;
+			margin: 0 0 1.25rem 0;
+		}
+
+		p {
+			font-size: 1rem;
+			margin: 0 0 1.25rem 0;
+		}
+
+		.moreIntro {
+			background: none;
+			border: 0.125rem solid $font-color;
+			border-radius: 0.3125rem;
+			color: $font-color;
+			cursor: pointer;
+			font-size: 1.25rem;
+			// font-weight: bold;
+			margin: 0 auto 0 auto;
+			padding: 0.125rem !important;
+			text-decoration: none;
+
+			&:hover {
+				background-color: $font-color;
+				color: $secondary-bg-color;
+			}
+		}
+	}
+}
+
+// social media icons styles
+.socialIcons {
+	display: flex;
+	color: $font-color;
+	justify-content: space-around;
+	margin: 1.25rem 0 auto 0;
+	width: 100%;
+
+	a {
+		color: inherit;
+	}
+
+	svg {
+		font-size: 2rem;
+	}
+}

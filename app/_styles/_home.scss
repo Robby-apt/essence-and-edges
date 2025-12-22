@@ -1,0 +1,29 @@
+// hero section styles
+@import 'home-hero';
+
+// about and newsletter section styles
+.infoSection {
+	// background-color: $font-color;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	// grid-template-columns: 2fr 1fr;
+	// gap: 1.25rem;
+	max-width: 100%;
+	height: 28.125rem;
+	margin: 3.125rem 0;
+	padding: 0 1.25rem !important;
+	// height: 100vh;
+}
+
+// about me styles
+@import 'home-about';
+
+// newsletter styles
+@import 'home-newsletter';
+
+// articles section styles
+@import 'home-articles';
+
+// contact section styles
+@import 'home-contact';

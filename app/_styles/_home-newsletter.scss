@@ -1,0 +1,73 @@
+.newsletter {
+	background-color: $secondary-bg-color;
+	display: flex;
+	flex-direction: column;
+	padding: 0.625rem;
+	width: 30%;
+
+	img {
+		width: 100%;
+		// margin-bottom: 1.25rem;
+		height: 40%;
+	}
+
+	.newsletterInfo {
+		// background-color: $accent-color;
+		display: flex;
+		flex-direction: column;
+		// margin: 0 0 auto 0;
+		height: 40%;
+
+		h2 {
+			color: $font-color;
+			font-size: 1.5rem;
+			font-weight: bold;
+			// margin: 0 0 1.25rem 0;
+			text-align: center;
+		}
+
+		p {
+			font-size: 1rem;
+			// margin: 0 0 1.25rem 0;
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+
+			label {
+				color: $font-color;
+				font-size: 1.25rem;
+				font-weight: bold;
+				margin-bottom: 0.3125rem;
+			}
+
+			input {
+				padding: 0.5rem;
+				margin: 0 0 0.625rem 0;
+				border: 0.125rem solid $font-color;
+				border-radius: 0.3125rem;
+				font-size: 1rem;
+			}
+
+			button {
+				background: none;
+				border: 0.125rem solid $font-color;
+				border-radius: 0.3125rem;
+				color: $font-color;
+				cursor: pointer;
+				font-size: 1.25rem;
+				// font-weight: bold;
+				margin: 0 auto;
+				padding: 0.125rem !important;
+				text-decoration: none;
+
+				&:hover {
+					background-color: $font-color;
+					color: $secondary-bg-color;
+				}
+			}
+		}
+	}
+}
