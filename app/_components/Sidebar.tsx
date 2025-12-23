@@ -1,5 +1,5 @@
 export default function Sidebar() {
-	return (
+    return (
 		<div className="sideBar">
 			<ul>
 				<li>

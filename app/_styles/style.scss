@@ -73,7 +73,8 @@ nav {
 }
 
 // sidebar styles
-.sideBar {
+.sideBar,
+.sideBarResponsive {
 	background-color: $accent-color;
 	display: flex;
 	padding: 0;
