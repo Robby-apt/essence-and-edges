@@ -1,0 +1,16 @@
+// first breakpoint
+@media (max-width: 760px) {
+}
+
+// second breakpoint
+@media (min-width: 760px) {
+}
+
+// third breakpoint
+@import 'media-max-800';
+
+// fourth breakpoint
+@import 'media-max-1130';
+
+// fifth breakpoint
+@import 'media-max-1450';

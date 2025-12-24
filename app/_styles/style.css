@@ -292,7 +292,7 @@ footer p {
 .articlesSection {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 100% !important;
 }
 .articlesSection h2 {
   color: #675139;
@@ -304,7 +304,7 @@ footer p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 1.25rem 3.125rem;
+  margin: 0 1.25rem 3.125rem 1.25rem;
   height: 31.25rem;
 }
 .articlesSection .articlesDisplay .articleCard {
@@ -438,6 +438,23 @@ footer p {
   color: #f5f1e5;
 }
 
+@media (max-width: 800px) {
+  .aboutMe {
+    flex-direction: column;
+  }
+  .aboutMe img {
+    margin: 0.625rem 0.625rem 1.25rem;
+    -o-object-position: top;
+       object-position: top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: calc(100% - 1.25rem);
+    height: 31.25rem;
+  }
+  .aboutMe .aboutText {
+    width: calc(100% - 1.25rem) !important;
+  }
+}
 @media (max-width: 1130px) {
   nav .navIcon {
     display: flex;
@@ -477,11 +494,27 @@ footer p {
     flex-direction: column !important;
     height: -moz-fit-content;
     height: fit-content;
-    width: 95% !important;
     height: auto !important;
   }
   .articlesDisplay .articleCard {
     width: 100% !important;
+    min-width: none;
+    height: auto !important;
+    min-height: none !important;
+    padding: 0 !important;
+  }
+  .articlesDisplay .articleCard img {
+    width: calc(100% - 1.25rem) !important;
+    margin: 0.625rem 0.625rem 0 0.625rem;
+  }
+  .articlesDisplay .articleCard h3 {
+    margin: 0.625rem !important;
+  }
+  .articlesDisplay .articleCard p {
+    margin: 0 0.625rem 0.625rem !important;
+  }
+  .articlesDisplay .articleCard a {
+    margin: 0.625rem !important;
   }
   .articlesDisplay .articleCard:not(:last-child) {
     margin-bottom: 1.25rem;

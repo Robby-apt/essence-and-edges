@@ -1,0 +1,18 @@
+@media (max-width: 800px) {
+	.aboutMe {
+		flex-direction: column;
+
+		img {
+			margin: 0.625rem 0.625rem 1.25rem;
+			object-position: top;
+			object-fit: cover;
+			width: calc(100% - 1.25rem);
+			height: 31.25rem;
+		}
+
+		.aboutText {
+			// background-color: turquoise;
+			width: calc(100% - 1.25rem) !important;
+		}
+	}
+}
