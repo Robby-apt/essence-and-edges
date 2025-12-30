@@ -28,10 +28,11 @@ nav {
 	background-color: $secondary-bg-color;
 	display: flex;
 	justify-content: space-between;
-	padding: 0.625rem 0;
+	// padding: 0.625rem 0;
 	text-align: center;
 	position: fixed;
 	width: 100%;
+	height: 6.5rem;
 	z-index: 2;
 
 	.navIcon {

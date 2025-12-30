@@ -1,0 +1,75 @@
+.newPost {
+	background-color: $secondary-bg-color;
+	display: flex;
+    filter: drop-shadow(0.3125rem 0.3125rem 0.25rem rgba(0, 0, 0, 0.4));
+	flex-direction: column;
+	margin: auto;
+	width: 70%;
+
+	h2 {
+		color: $font-color;
+		font-size: 2rem;
+		font-weight: bold;
+		margin: 1.25rem auto 0;
+		text-align: center;
+	}
+
+	form {
+		// background-color: #81705d;
+		display: flex;
+		flex-direction: column;
+		margin: 1.25rem;
+
+		.blogInput {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1.25rem;
+
+			label {
+				color: $font-color;
+				// font-size: 1.25rem;
+				font-weight: bold;
+				margin-bottom: 0.3125rem;
+			}
+
+			input,
+			select,
+			textarea {
+				background-color: #fff;
+				border: 0.125rem solid $font-color;
+				padding: 0.3125rem;
+			}
+		}
+
+		.newPostBtns {
+			display: flex;
+			margin: 0 auto;
+
+			button {
+				background: none;
+				border: 0.125rem solid $font-color;
+				border-radius: 0.3125rem;
+				color: $font-color;
+				cursor: pointer;
+				font-size: 1.25rem;
+				font-weight: bold;
+				margin: auto;
+				padding: 0.625rem !important;
+				text-decoration: none;
+
+				&:not(:last-child) {
+					background-color: #81705d;
+					border: 0.125rem solid #81705d;
+					color: $secondary-bg-color;
+					margin-right: 1.25rem;
+				}
+
+				&:hover {
+					background-color: $font-color;
+					color: $secondary-bg-color;
+					border: 0.125rem solid $font-color;
+				}
+			}
+		}
+	}
+}

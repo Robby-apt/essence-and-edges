@@ -1,10 +1,11 @@
 .dashboardContent {
-	background-color: $secondary-bg-color;
 	display: flex;
 	flex: column;
 	justify-content: space-between;
 	margin: 1.25rem;
+}
 
+.infoAndBtns {
 	.dashboardInfo {
 		display: flex;
 		flex-direction: column;
@@ -48,8 +49,22 @@
 			&:hover {
 				background-color: $font-color;
 				color: $secondary-bg-color;
-                border: 0.125rem solid $font-color;
+				border: 0.125rem solid $font-color;
 			}
 		}
 	}
 }
+
+.blogListDisplay {
+	background-color: $secondary-bg-color;
+	display: flex;
+	flex-direction: column;
+
+	p {
+		color: #81705d;
+		margin: 1.25rem auto;
+	}
+}
+
+// New posts form styles
+@import 'new-post-form';

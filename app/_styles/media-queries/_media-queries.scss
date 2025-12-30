@@ -3,7 +3,19 @@
 }
 
 // second breakpoint
-@media (min-width: 760px) {
+@media (max-width: 625px) {
+	.infoAndBtns {
+		flex-direction: column;
+
+		.dashboardInfo {
+			align-items: center;
+			text-align: center;
+		}
+
+		.dashboardBtns {
+			margin: 1.25rem auto 0;
+		}
+	}
 }
 
 // third breakpoint
