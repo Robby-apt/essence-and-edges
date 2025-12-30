@@ -51,15 +51,16 @@ nav {
 		margin: auto;
 		padding: 0;
 
-		&:hover {
-			text-decoration: underline;
-		}
-
 		h1 {
 			color: $font-color;
 			margin: 0;
 			font-size: 4rem;
 			font-weight: bold;
+
+			&:hover {
+				color: #81705d;
+				// text-decoration: underline;
+			}
 		}
 	}
 }
@@ -69,6 +70,8 @@ nav {
 	display: flex;
 	position: relative;
 	margin: 6.5rem 0 0 0;
+	/* allow content section to grow and fill available vertical space */
+	flex: 1 1 auto;
 	width: 100%;
 }
 
@@ -119,6 +122,7 @@ main {
 		// background-color: $font-color;
 		display: flex;
 		flex-direction: column;
+		flex: 1 1 auto;
 	}
 }
 
@@ -150,3 +154,9 @@ footer {
 
 // media queries
 @import 'media-queries/media-queries';
+
+// login styles
+@import 'login';
+
+// dashboard styles
+@import 'dashboard';
