@@ -651,6 +651,19 @@ footer p {
   border: 0.125rem solid #675139;
 }
 
+.manageBio {
+  background-color: #f5f1e5;
+  height: 31.25rem;
+}
+.manageBio img {
+  margin: 0.625rem;
+  width: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
 .blogListDisplay {
   background-color: #f5f1e5;
   display: flex;

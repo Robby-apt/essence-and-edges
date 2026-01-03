@@ -55,6 +55,18 @@
 	}
 }
 
+.manageBio {
+	background-color: $secondary-bg-color;
+	height: 31.25rem;
+
+	img {
+		margin: 0.625rem;
+		width: 30%;
+		object-fit: cover;
+		object-position: top;
+	}
+}
+
 .blogListDisplay {
 	background-color: $secondary-bg-color;
 	display: flex;

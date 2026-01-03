@@ -1,4 +1,5 @@
 import BlogListDisplay from '@/app/_components/BlogListDisplay';
+import ManageBio from '@/app/_components/ManageBio';
 
 export default function Dashboard() {
 	// Get time of day for greeting
@@ -20,10 +21,16 @@ export default function Dashboard() {
 					<p>Welcome to your admin panel.</p>
 				</div>
 				<div className="dashboardBtns">
-					<a className="dashboardBtn" href="/admin/dashboard/new_post">+ New Post</a>
+					<a
+						className="dashboardBtn"
+						href="/admin/dashboard/new_post"
+					>
+						+ New Post
+					</a>
 					<a className="dashboardBtn">Log out</a>
 				</div>
 			</div>
+			<ManageBio />
 			<BlogListDisplay />
 		</div>
 	);
