@@ -1,7 +1,6 @@
 'use client';
-import {redirect} from 'next/navigation';
-import { ChangeEvent } from 'react';
-import { useState } from 'react';
+import { redirect } from 'next/navigation';
+import { useState, ChangeEvent } from 'react';
 import categoriesList from './categoriesList';
 
 export default function NewPost() {
@@ -31,15 +30,15 @@ export default function NewPost() {
 		console.log('Form submitted:', formInput);
 	}
 
-    function resetFormInput() {
-        setFormInput({
-            titleInput: '',
-            imageInput: '',
-            categoryInput: categoriesList[0].value,
-            dateInput: '',
-            postInput: '',
-        });
-    }
+	function resetFormInput() {
+		setFormInput({
+			titleInput: '',
+			imageInput: '',
+			categoryInput: categoriesList[0].value,
+			dateInput: '',
+			postInput: '',
+		});
+	}
 
 	return (
 		<div className="newPost">
@@ -114,7 +113,9 @@ export default function NewPost() {
 					<button type="submit" className="submitBtn">
 						Create Post
 					</button>
-					<button className="resetBtn" onClick={resetFormInput}>Cancel</button>
+					<button className="resetBtn" onClick={resetFormInput}>
+						Cancel
+					</button>
 				</div>
 			</form>
 		</div>

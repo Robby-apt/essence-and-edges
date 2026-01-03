@@ -22,4 +22,25 @@
 	.loginFormSection {
 		width: 70% !important;
 	}
+
+	.manageBio {
+		flex-direction: column;
+		height: auto !important;
+
+		img {
+			object-fit: cover;
+			object-position: center;
+			// flex: 1 !important;
+			// flex-grow: 1 !important;
+			margin: 0.625rem !important;
+			width: auto !important;
+			height: 31.25rem !important;
+		}
+
+		div {
+			margin: 0 0.625rem 0.625rem !important;
+			width: auto !important;
+			height: auto;
+		}
+	}
 }

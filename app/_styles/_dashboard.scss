@@ -57,6 +57,7 @@
 
 .manageBio {
 	background-color: $secondary-bg-color;
+    display: flex;
 	height: 31.25rem;
 
 	img {
@@ -64,6 +65,89 @@
 		width: 30%;
 		object-fit: cover;
 		object-position: top;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		margin: 0.625rem 0.625rem 0.625rem 0;
+
+		h3 {
+			color: $font-color;
+			font-size: 1.5rem;
+			font-weight: bold;
+			margin: 0 auto 0.625rem;
+		}
+
+		form {
+			// background-color: aqua;
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			justify-content: space-between !important;
+			// justify-items: space-between;
+			padding: 0;
+
+			.bioInput {
+				// background-color: #81705d;
+				display: flex;
+				flex-direction: column;
+
+				// &:first-child {
+				// 	margin: 0 0 0.625rem;
+				// }
+
+				// &:last-child {
+				// 	margin: 0.625rem 0;
+				// }
+
+				label {
+					color: $font-color;
+					font-weight: bold;
+					// margin: 0 0 0.3125rem;
+				}
+
+				input,
+				textarea {
+					background-color: #fff;
+				border: 0.125rem solid $font-color;
+				padding: 0.3125rem;
+				}
+			}
+
+			.editBioBtns {
+				display: flex;
+				flex-direction: row;
+				margin: 0 auto;
+
+				button {
+					background: none;
+					border: 0.125rem solid $font-color;
+					border-radius: 0.3125rem;
+					color: $font-color;
+					cursor: pointer;
+					font-size: 1.25rem;
+					font-weight: bold;
+					margin: auto;
+					padding: 0.625rem !important;
+					text-decoration: none;
+
+					&:not(:last-child) {
+						background-color: #81705d;
+						border: 0.125rem solid #81705d;
+						color: $secondary-bg-color;
+						margin-right: 1.25rem;
+					}
+
+					&:hover {
+						background-color: $font-color;
+						color: $secondary-bg-color;
+						border: 0.125rem solid $font-color;
+					}
+				}
+			}
+		}
 	}
 }
 
