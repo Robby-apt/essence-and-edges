@@ -24,10 +24,20 @@ export default function NewPost() {
 		}));
 	}
 
-	function handleFormSubmit(event: React.FormEvent) {
+	async function handleFormSubmit(event: React.FormEvent) {
 		event.preventDefault();
-		// Handle form submission logic here
-		console.log('Form submitted:', formInput);
+
+		const res = await fetch('/api/blogs', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(formInput),
+		});
+
+		const data = await res.json();
+		if (res.ok) {
+			alert(data.message);
+			resetFormInput();
+		} else alert('Error: ' + data.error);
 	}
 
 	function resetFormInput() {
@@ -113,7 +123,11 @@ export default function NewPost() {
 					<button type="submit" className="submitBtn">
 						Create Post
 					</button>
-					<button className="resetBtn" onClick={resetFormInput}>
+					<button
+						type="reset"
+						className="resetBtn"
+						onClick={resetFormInput}
+					>
 						Cancel
 					</button>
 				</div>

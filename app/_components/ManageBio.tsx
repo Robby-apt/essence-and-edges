@@ -16,10 +16,18 @@ export default function ManageBio() {
 		setBioInput((prev) => ({ ...prev, [name]: value }));
 	}
 
-	function handleBioSubmit(event: React.FormEvent) {
+	async function handleBioSubmit(event: React.FormEvent) {
 		event.preventDefault();
-		// Handle bio submission logic here
-		console.log('Bio submitted:', bioInput);
+
+		const res = await fetch('/api/bio', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(bioInput),
+		});
+
+		const data = await res.json();
+		if (res.ok) alert(data.message);
+		else alert('Error: ' + data.error);
 	}
 
 	function resetBioInput() {
@@ -49,8 +57,8 @@ export default function ManageBio() {
 					<div className="bioInput bioInfoDiv">
 						<label htmlFor="bioInfoInput">Bio Information:</label>
 						<textarea
-							id="bioImgInput"
-							name="bioImgInput"
+							id="bioInfoInput"
+							name="bioInfoInput"
 							rows={15}
 							value={bioInput.bioInfoInput}
 							onChange={handleBioChange}
@@ -58,7 +66,9 @@ export default function ManageBio() {
 					</div>
 					<div className="editBioBtns">
 						<button type="submit">Edit Bio</button>
-						<button onClick={resetBioInput}>Cancel</button>
+						<button type="reset" onClick={resetBioInput}>
+							Cancel
+						</button>
 					</div>
 				</form>
 			</div>
