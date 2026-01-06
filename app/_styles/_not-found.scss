@@ -1,0 +1,44 @@
+.notFound {
+	div {
+		// background-color: aqua;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		align-items: center;
+		min-width: 500px;
+
+		img {
+			margin: 1.25rem;
+			width: 90%;
+			height: 50%;
+			object-fit: contain;
+		}
+
+		h2 {
+			color: $font-color;
+			font-size: 2rem;
+			font-weight: bold;
+			margin: 0 auto 1.25rem;
+			text-align: center;
+		}
+
+		a {
+			background: none;
+			border: 0.125rem solid $font-color;
+			border-radius: 0.3125rem;
+			color: $font-color;
+			cursor: pointer;
+			font-size: 1.25rem;
+			font-weight: bold;
+			margin: 0 auto 1.25rem;
+			padding: 0.625rem !important;
+			text-decoration: none;
+
+			&:hover {
+				background-color: $font-color;
+				color: $secondary-bg-color;
+				border: 0.125rem solid $font-color;
+			}
+		}
+	}
+}

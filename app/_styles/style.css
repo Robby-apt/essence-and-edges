@@ -594,16 +594,26 @@ footer p {
   display: flex;
   flex-direction: column;
 }
-.loginFormSection form label {
+.loginFormSection form div {
+  display: flex;
+  flex-direction: column;
+}
+.loginFormSection form div:first-child {
+  margin-bottom: 0.625rem;
+}
+.loginFormSection form div label {
   color: #675139;
   font-size: 1rem;
   font-weight: bold;
   margin: 0 1.25rem;
 }
-.loginFormSection form input {
+.loginFormSection form div input {
+  background-color: #fff;
+  border: 0.125rem solid #675139;
   font-size: 1rem;
   font-weight: bold;
   margin: 0.625rem 1.25rem;
+  padding: 0.3125rem;
 }
 .loginFormSection form button {
   background: none;
@@ -613,7 +623,7 @@ footer p {
   cursor: pointer;
   font-size: 1.25rem;
   font-weight: bold;
-  margin: 0 auto 1.25rem;
+  margin: 1.25rem auto;
   padding: 0.125rem !important;
   text-decoration: none;
 }
@@ -814,6 +824,45 @@ footer p {
   margin-right: 1.25rem;
 }
 .newPost form .newPostBtns button:hover {
+  background-color: #675139;
+  color: #f5f1e5;
+  border: 0.125rem solid #675139;
+}
+
+.notFound div {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  min-width: 500px;
+}
+.notFound div img {
+  margin: 1.25rem;
+  width: 90%;
+  height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.notFound div h2 {
+  color: #675139;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 1.25rem;
+  text-align: center;
+}
+.notFound div a {
+  background: none;
+  border: 0.125rem solid #675139;
+  border-radius: 0.3125rem;
+  color: #675139;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 auto 1.25rem;
+  padding: 0.625rem !important;
+  text-decoration: none;
+}
+.notFound div a:hover {
   background-color: #675139;
   color: #f5f1e5;
   border: 0.125rem solid #675139;
