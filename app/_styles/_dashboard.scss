@@ -39,12 +39,23 @@
 			padding: 0.625rem !important;
 			text-decoration: none;
 
-			&:not(:last-child) {
-				background-color: #81705d;
-				border: 0.125rem solid #81705d;
+			&:hover {
+				background-color: $font-color;
 				color: $secondary-bg-color;
-				margin-right: 1.25rem;
+				border: 0.125rem solid $font-color;
 			}
+		}
+
+		button {
+			background-color: #81705d;
+			border: 0.125rem solid #81705d;
+			border-radius: 0.3125rem;
+			color: $secondary-bg-color;
+			cursor: pointer;
+			font-size: 1.25rem;
+			font-weight: bold;
+			margin: auto 0 auto 1.25rem;
+			padding: 0.625rem !important;
 
 			&:hover {
 				background-color: $font-color;
@@ -57,7 +68,7 @@
 
 .manageBio {
 	background-color: $secondary-bg-color;
-    display: flex;
+	display: flex;
 	height: 31.25rem;
 
 	img {
@@ -111,8 +122,8 @@
 				input,
 				textarea {
 					background-color: #fff;
-				border: 0.125rem solid $font-color;
-				padding: 0.3125rem;
+					border: 0.125rem solid $font-color;
+					padding: 0.3125rem;
 				}
 			}
 
@@ -152,12 +163,39 @@
 }
 
 .blogListDisplay {
-	background-color: $secondary-bg-color;
+	background-color: $accent-color;
 	display: flex;
 	flex-direction: column;
+	padding: 1.25rem 0 0;
 
-	p {
-		color: #81705d;
+	h3 {
+		color: $secondary-bg-color;
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin: 0 auto 0.625rem;
+	}
+
+	.articleRow {
+		background-color: $secondary-bg-color;
+		display: flex;
+		margin: 0 auto 1.25rem;
+		width: calc(100% - 2.5rem);
+		height: 6.25rem;
+
+        svg{
+            color: $font-color;
+            font-size: 2.5rem;
+            margin: auto 1.25rem;
+        }
+
+        img{
+            object-fit: contain;
+            width: 15%;
+        }
+	}
+
+	.noPost {
+		color: $secondary-bg-color;
 		margin: 1.25rem auto;
 	}
 }

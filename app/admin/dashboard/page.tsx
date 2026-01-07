@@ -1,3 +1,4 @@
+import DashboardBtns from '@/app/_components/DashboardBtns';
 import BlogListDisplay from '@/app/_components/BlogListDisplay';
 import ManageBio from '@/app/_components/ManageBio';
 
@@ -20,15 +21,7 @@ export default function Dashboard() {
 					<h2>{greeting} Bella👋</h2>
 					<p>Welcome to your admin panel.</p>
 				</div>
-				<div className="dashboardBtns">
-					<a
-						className="dashboardBtn"
-						href="/admin/dashboard/new_post"
-					>
-						+ New Post
-					</a>
-					<a className="dashboardBtn">Log out</a>
-				</div>
+				<DashboardBtns />
 			</div>
 			<ManageBio />
 			<BlogListDisplay />

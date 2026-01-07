@@ -1,0 +1,54 @@
+.blogArticle {
+	display: flex;
+	flex-direction: column;
+
+	.blogHero {
+		background-color: rgba(178, 167, 147, 0.1);
+		display: flex;
+		margin: 0 1.25rem;
+		position: relative;
+		width: calc(100% - 2.5rem);
+		height: 31.25rem;
+
+		img {
+			margin: auto;
+			object-fit: cover;
+			object-position: center;
+			// width: 40%;
+			height: 100%;
+		}
+
+		.blogDate {
+			background-color: $font-color;
+			margin: auto;
+			padding: 0.625rem;
+			position: absolute;
+
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+
+			p {
+				color: $secondary-bg-color;
+				margin: 0;
+			}
+		}
+	}
+
+	.blogBody {
+		background-color: $secondary-bg-color;
+		margin: 1.25rem;
+
+		h2 {
+			font-size: 2.5rem;
+			color: $font-color;
+			align-self: center;
+			text-align: center;
+			margin: 1.25rem;
+		}
+
+        p{
+            margin: 0 1.25rem 1.25rem;
+        }
+	}
+}

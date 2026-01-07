@@ -1,9 +1,9 @@
 .newPost {
 	background-color: $secondary-bg-color;
 	display: flex;
-    filter: drop-shadow(0.3125rem 0.3125rem 0.25rem rgba(0, 0, 0, 0.4));
+	filter: drop-shadow(0.3125rem 0.3125rem 0.25rem rgba(0, 0, 0, 0.4));
 	flex-direction: column;
-	margin: auto;
+	margin: 1.25rem auto;
 	width: 70%;
 
 	h2 {
@@ -12,6 +12,13 @@
 		font-weight: bold;
 		margin: 1.25rem auto 0;
 		text-align: center;
+	}
+
+	img {
+		margin: 1.25rem auto;
+		object-fit: contain;
+		object-position: center;
+		width: 80%;
 	}
 
 	form {

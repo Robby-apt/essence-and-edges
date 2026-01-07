@@ -4,6 +4,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useSidebar } from '../_providers/SidebarProvider';
+import Link from 'next/link';
 
 export default function Navbar() {
 	const { isSidebarOpen, toggleSidebar } = useSidebar();
@@ -23,9 +24,9 @@ export default function Navbar() {
 				/>
 			</div>
 
-			<a href="/">
+			<Link href="/">
 				<h1 className="title">ESSENCE & EDGES</h1>
-			</a>
+			</Link>
 
 			<div className="fillerDiv navIcon" />
 		</nav>

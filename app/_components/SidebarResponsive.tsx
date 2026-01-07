@@ -1,6 +1,7 @@
 // app/_components/SidebarResponsive.tsx
 'use client';
 
+import Link from 'next/link';
 import { useSidebar } from '../_providers/SidebarProvider';
 
 export default function SidebarResponsive() {
@@ -20,34 +21,37 @@ export default function SidebarResponsive() {
 			<div className="sideBarResponsive responsive-sidebar">
 				<ul>
 					<li>
-						<a href="/about-me" onClick={closeSidebar}>
+						<Link href="/about-me" onClick={closeSidebar}>
 							About me
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="/the-office-edit" onClick={closeSidebar}>
+						<Link href="/the-office-edit" onClick={closeSidebar}>
 							The Office Edit
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="/under-open-skies" onClick={closeSidebar}>
+						<Link href="/under-open-skies" onClick={closeSidebar}>
 							Under Open Skies
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="/papers-from-my-mind" onClick={closeSidebar}>
+						<Link
+							href="/papers-from-my-mind"
+							onClick={closeSidebar}
+						>
 							Papers From My Mind
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="/the-heart-archive" onClick={closeSidebar}>
+						<Link href="/the-heart-archive" onClick={closeSidebar}>
 							The Heart Archive
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a href="/the-living-room" onClick={closeSidebar}>
+						<Link href="/the-living-room" onClick={closeSidebar}>
 							The Living Room
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</div>

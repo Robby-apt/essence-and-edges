@@ -1,24 +1,26 @@
+import Link from 'next/link';
+
 export default function Sidebar() {
-    return (
+	return (
 		<div className="sideBar">
 			<ul>
 				<li>
-					<a href="/about-me">About me</a>
+					<Link href="/about-me">About me</Link>
 				</li>
 				<li>
-					<a href="/the-office-edit">The Office Edit</a>
+					<Link href="/the-office-edit">The Office Edit</Link>
 				</li>
 				<li>
-					<a href="/under-open-skies">Under Open Skies</a>
+					<Link href="/under-open-skies">Under Open Skies</Link>
 				</li>
 				<li>
-					<a href="/papers-from-my-mind">Papers From My Mind</a>
+					<Link href="/papers-from-my-mind">Papers From My Mind</Link>
 				</li>
 				<li>
-					<a href="/the-heart-archive">The Heart Archive</a>
+					<Link href="/the-heart-archive">The Heart Archive</Link>
 				</li>
 				<li>
-					<a href="/the-living-room">The Living Room</a>
+					<Link href="/the-living-room">The Living Room</Link>
 				</li>
 			</ul>
 		</div>
