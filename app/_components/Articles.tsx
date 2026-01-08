@@ -68,7 +68,7 @@ export default function Articles() {
 			</div>
 
 			<div className="moreArticles">
-				<Link href="/the-office-edit">See more articles →</Link>
+				<Link href="/all-blogs">See more articles →</Link>
 			</div>
 		</section>
 	);

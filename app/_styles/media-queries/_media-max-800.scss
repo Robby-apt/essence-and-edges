@@ -7,9 +7,11 @@
 		}
 	}
 
-    // .contentSection {
-    //     margin: 5rem 0 0 0;
-    // }
+	.heroSection{
+        .heroDetails{
+            margin: auto 1.25rem 1.25rem !important;
+        }
+    }
 
 	.aboutMe {
 		flex-direction: column;
@@ -18,13 +20,35 @@
 			margin: 0.625rem 0.625rem 1.25rem;
 			object-position: top;
 			object-fit: cover;
-			width: calc(100% - 1.25rem);
+			width: calc(100% - 1.25rem) !important;
 			height: 31.25rem;
 		}
 
 		.aboutText {
 			// background-color: turquoise;
 			width: calc(100% - 1.25rem) !important;
+		}
+	}
+
+	.contactInfo {
+		.infoDisplay {
+			padding: 0 !important;
+
+			p {
+				margin: 1.25rem 0.625rem 0 !important;
+			}
+
+			.socialIcons {
+				margin: 1.25rem auto;
+			}
+		}
+	}
+
+    .blogArticleGrid {
+		grid-template-columns: repeat(1, 1fr) !important;
+
+		.noBlogs {
+			grid-column: 1 / span 1 !important;
 		}
 	}
 }

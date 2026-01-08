@@ -16,8 +16,15 @@
 
 		.newsletter {
 			width: inherit !important;
-			height: min-content !important;
-			min-height: unset !important;
+			height: 30rem;
+			// height: min-content !important;
+			// min-height: unset !important;
+
+			form {
+				button {
+					margin: 0.625rem auto !important;
+				}
+			}
 		}
 	}
 
@@ -26,35 +33,36 @@
 		flex-direction: column !important;
 		height: fit-content;
 		// width: 95% !important;
-		height: auto !important;
+		// height: auto !important;
+		height: max-content !important;
+	}
 
-		.articleCard {
-			width: 100% !important;
-			min-width: none;
-			height: auto !important;
-			min-height: none !important;
-			padding: 0 !important;
+	.articleCard {
+		width: 100% !important;
+		min-width: none;
+		height: 30rem !important;
+		// min-height: 480px !important;
+		padding: 0.625rem 0 !important;
 
-			img {
-				width: calc(100% - 1.25rem) !important;
-				margin: 0.625rem 0.625rem 0 0.625rem;
-			}
+		img {
+			width: calc(100% - 1.25rem) !important;
+			margin: 0 0.625rem 0 0.625rem;
+		}
 
-			h3 {
-				margin: 0.625rem !important;
-			}
+		h3 {
+			margin: 0.625rem !important;
+		}
 
-			p {
-				margin: 0 0.625rem 0.625rem !important;
-			}
+		p {
+			margin: 0 0.625rem 0.625rem !important;
+		}
 
-			a {
-				margin: 0.625rem !important;
-			}
+		a {
+			margin: 0.625rem auto 1.25rem 0.625rem !important;
+		}
 
-			&:not(:last-child) {
-				margin-bottom: 1.25rem;
-			}
+		&:not(:last-child) {
+			margin-bottom: 1.25rem;
 		}
 	}
 
@@ -73,6 +81,14 @@
 			a {
 				margin: 0 0 1.25rem 0 !important;
 			}
+		}
+	}
+
+	.blogArticleGrid {
+		grid-template-columns: repeat(2, 1fr) !important;
+
+		.noBlogs {
+			grid-column: 1 / span 2 !important;
 		}
 	}
 }

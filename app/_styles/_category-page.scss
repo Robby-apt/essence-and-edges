@@ -18,5 +18,10 @@
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1.25rem;
 		margin: 0 1.25rem 1.25rem;
+
+		.noBlogs {
+			grid-column: 1 / span 4;
+			text-align: center;
+		}
 	}
 }

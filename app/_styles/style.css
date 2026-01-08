@@ -184,7 +184,7 @@ footer p {
   width: 65%;
 }
 .aboutMe img {
-  width: 40%;
+  width: 40% !important;
 }
 .aboutMe .aboutText {
   display: flex;
@@ -192,6 +192,7 @@ footer p {
   align-items: center;
   justify-content: center;
   margin: auto;
+  width: calc(60% - 2.5rem);
 }
 .aboutMe .aboutText h2 {
   color: #675139;
@@ -223,7 +224,7 @@ footer p {
   display: flex;
   color: #675139;
   justify-content: space-around;
-  margin: 1.25rem 0 auto 0;
+  margin: 1.25rem 0 0.625rem;
   width: 100%;
 }
 .socialIcons a {
@@ -310,42 +311,6 @@ footer p {
   margin: 0 1.25rem 3.125rem 1.25rem;
   height: 31.25rem;
 }
-.articlesSection .articlesDisplay .articleCard {
-  background-color: #f5f1e5;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  padding: 0.625rem;
-}
-.articlesSection .articlesDisplay .articleCard img {
-  width: 100%;
-  height: 70%;
-}
-.articlesSection .articlesDisplay .articleCard h3 {
-  color: #675139;
-  font-size: 1.25rem;
-  margin: 0.625rem 0;
-  text-decoration: underline;
-}
-.articlesSection .articlesDisplay .articleCard p {
-  color: #675139;
-  font-size: 0.875rem;
-  margin: 0 auto 0.625rem 0;
-}
-.articlesSection .articlesDisplay .articleCard a {
-  background: none;
-  border: 0.125rem solid #675139;
-  border-radius: 0.3125rem;
-  color: #675139;
-  cursor: pointer;
-  font-size: 1.25rem;
-  margin: 0 auto;
-  padding: 0.125rem !important;
-  text-decoration: none;
-}
-.articlesSection .articlesDisplay .articleCard a:hover {
-  background-color: #675139;
-  color: #f5f1e5;
-}
 .articlesSection .moreArticles {
   background-color: #f5f1e5;
   display: flex;
@@ -364,6 +329,43 @@ footer p {
   text-decoration: none;
 }
 .articlesSection .moreArticles a:hover {
+  background-color: #675139;
+  color: #f5f1e5;
+}
+
+.articleCard {
+  background-color: #f5f1e5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  padding: 0.625rem;
+}
+.articleCard img {
+  width: 100%;
+  height: 70%;
+}
+.articleCard h3 {
+  color: #675139;
+  font-size: 1.25rem;
+  margin: 0.625rem 0;
+  text-decoration: underline;
+}
+.articleCard p {
+  color: #675139;
+  font-size: 0.875rem;
+  margin: 0 auto 0.625rem 0;
+}
+.articleCard a {
+  background: none;
+  border: 0.125rem solid #675139;
+  border-radius: 0.3125rem;
+  color: #675139;
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin: 0 auto 0.625rem;
+  padding: 0.125rem !important;
+  text-decoration: none;
+}
+.articleCard a:hover {
   background-color: #675139;
   color: #f5f1e5;
 }
@@ -457,6 +459,9 @@ footer p {
   nav a h1 {
     font-size: 2.5rem;
   }
+  .heroSection .heroDetails {
+    margin: auto 1.25rem 1.25rem !important;
+  }
   .aboutMe {
     flex-direction: column;
   }
@@ -466,11 +471,26 @@ footer p {
        object-position: top;
     -o-object-fit: cover;
        object-fit: cover;
-    width: calc(100% - 1.25rem);
+    width: calc(100% - 1.25rem) !important;
     height: 31.25rem;
   }
   .aboutMe .aboutText {
     width: calc(100% - 1.25rem) !important;
+  }
+  .contactInfo .infoDisplay {
+    padding: 0 !important;
+  }
+  .contactInfo .infoDisplay p {
+    margin: 1.25rem 0.625rem 0 !important;
+  }
+  .contactInfo .infoDisplay .socialIcons {
+    margin: 1.25rem auto;
+  }
+  .blogArticleGrid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .blogArticleGrid .noBlogs {
+    grid-column: 1/span 1 !important;
   }
 }
 @media (max-width: 1130px) {
@@ -525,37 +545,38 @@ footer p {
   }
   .infoSection .newsletter {
     width: inherit !important;
-    height: -moz-min-content !important;
-    height: min-content !important;
-    min-height: unset !important;
+    height: 30rem;
+  }
+  .infoSection .newsletter form button {
+    margin: 0.625rem auto !important;
   }
   .articlesDisplay {
     flex-direction: column !important;
     height: -moz-fit-content;
     height: fit-content;
-    height: auto !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
   }
-  .articlesDisplay .articleCard {
+  .articleCard {
     width: 100% !important;
     min-width: none;
-    height: auto !important;
-    min-height: none !important;
-    padding: 0 !important;
+    height: 30rem !important;
+    padding: 0.625rem 0 !important;
   }
-  .articlesDisplay .articleCard img {
+  .articleCard img {
     width: calc(100% - 1.25rem) !important;
-    margin: 0.625rem 0.625rem 0 0.625rem;
+    margin: 0 0.625rem 0 0.625rem;
   }
-  .articlesDisplay .articleCard h3 {
+  .articleCard h3 {
     margin: 0.625rem !important;
   }
-  .articlesDisplay .articleCard p {
+  .articleCard p {
     margin: 0 0.625rem 0.625rem !important;
   }
-  .articlesDisplay .articleCard a {
-    margin: 0.625rem !important;
+  .articleCard a {
+    margin: 0.625rem auto 1.25rem 0.625rem !important;
   }
-  .articlesDisplay .articleCard:not(:last-child) {
+  .articleCard:not(:last-child) {
     margin-bottom: 1.25rem;
   }
   .contactSection {
@@ -573,6 +594,12 @@ footer p {
   .contactSection .contactInfo a,
   .contactSection .contactForm a {
     margin: 0 0 1.25rem 0 !important;
+  }
+  .blogArticleGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .blogArticleGrid .noBlogs {
+    grid-column: 1/span 2 !important;
   }
 }
 .loginFormSection {
@@ -962,7 +989,6 @@ footer p {
   position: relative;
   width: calc(100% - 2.5rem);
   height: 31.25rem;
-  z-index: 1 !important;
 }
 .blogArticle .blogHero img {
   margin: auto;
@@ -971,7 +997,6 @@ footer p {
   -o-object-position: center;
      object-position: center;
   height: 100%;
-  z-index: 1 !important;
 }
 .blogArticle .blogHero .blogDate {
   background-color: #675139;
@@ -1018,4 +1043,8 @@ footer p {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   margin: 0 1.25rem 1.25rem;
+}
+.categoryPage .blogArticleGrid .noBlogs {
+  grid-column: 1/span 4;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

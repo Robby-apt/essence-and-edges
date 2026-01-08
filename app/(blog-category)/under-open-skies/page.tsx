@@ -61,7 +61,9 @@ export default function UnderOpenSkies() {
 						/>
 					))
 				) : (
-					<p>No posts yet. Check back soon!</p>
+					<p className="noBlogs">
+						No posts yet. Check back soon for new content ✨
+					</p>
 				)}
 			</div>
 		</div>
