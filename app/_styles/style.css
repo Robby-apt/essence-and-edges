@@ -493,6 +493,21 @@ footer p {
   .blogArticleGrid .noBlogs {
     grid-column: 1/span 1 !important;
   }
+  .notFound div {
+    margin: 1.25rem;
+    width: calc(100% - 2.5rem) !important;
+  }
+  .notFound div img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    -o-object-position: center !important;
+       object-position: center !important;
+    width: 80% !important;
+  }
+  .notFound div h2 {
+    font-size: 1.5rem !important;
+    margin: 1.25rem !important;
+  }
 }
 @media (max-width: 1130px) {
   nav .navIcon {
