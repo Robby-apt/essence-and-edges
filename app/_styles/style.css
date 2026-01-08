@@ -496,6 +496,7 @@ footer p {
   .notFound div {
     margin: 1.25rem;
     width: calc(100% - 2.5rem) !important;
+    min-width: none !important;
   }
   .notFound div img {
     -o-object-fit: contain !important;
@@ -503,10 +504,12 @@ footer p {
     -o-object-position: center !important;
        object-position: center !important;
     width: 80% !important;
+    min-width: none !important;
   }
   .notFound div h2 {
     font-size: 1.5rem !important;
     margin: 1.25rem !important;
+    min-width: none !important;
   }
 }
 @media (max-width: 1130px) {

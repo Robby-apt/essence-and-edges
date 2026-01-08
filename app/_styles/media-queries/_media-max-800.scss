@@ -57,18 +57,21 @@
 		div {
 			margin: 1.25rem;
 			width: calc(100% - 2.5rem) !important;
+			min-width: none !important;
 
 			img {
-                // background-color: aqua;
+				// background-color: aqua;
 				object-fit: contain !important;
 				object-position: center !important;
 				width: 80% !important;
+				min-width: none !important;
 			}
 
-            h2{
-                font-size: 1.5rem !important;
-                margin: 1.25rem !important;
-            }
+			h2 {
+				font-size: 1.5rem !important;
+				margin: 1.25rem !important;
+				min-width: none !important;
+			}
 		}
 	}
 }
