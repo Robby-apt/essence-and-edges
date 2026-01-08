@@ -1,6 +1,5 @@
 import Link from 'next/link';
 type Article = {
-	// category: string;
 	title: string;
 	category: string;
 	date: string;

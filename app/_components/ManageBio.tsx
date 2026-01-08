@@ -6,18 +6,24 @@ export default function ManageBio() {
 	const [bioText, setBioText] = useState('');
 	const [currentImgUrl, setCurrentImgUrl] = useState<string | null>(null);
 	const [newImgFile, setNewImgFile] = useState<File | null>(null);
+	const [loading, setLoading] = useState(true);
+
+	// Load bio from DB
+	async function loadBio() {
+		const { data, error } = await supabase
+			.from('bio')
+			.select('bio_img, bio_text')
+			.single();
+
+		if (!error && data) {
+			setBioText(data.bio_text || '');
+			setCurrentImgUrl(data.bio_img);
+		}
+
+		setLoading(false);
+	}
 
 	useEffect(() => {
-		async function loadBio() {
-			const { data } = await supabase
-				.from('bio')
-				.select('bio_img, bio_text')
-				.single();
-			if (data) {
-				setBioText(data.bio_text || '');
-				setCurrentImgUrl(data.bio_img);
-			}
-		}
 		loadBio();
 	}, []);
 
@@ -60,17 +66,32 @@ export default function ManageBio() {
 			}),
 		});
 
-		if (res.ok) alert('Bio updated');
-		else alert('Error saving bio');
+		if (res.ok) {
+			alert('Bio updated');
+			setNewImgFile(null);
+			loadBio();
+		} else {
+			alert('Error saving bio');
+		}
 	}
 
 	function resetBio() {
 		setNewImgFile(null);
+		loadBio();
 	}
 
 	const previewSrc = newImgFile
 		? URL.createObjectURL(newImgFile)
 		: currentImgUrl || '/author.jpg';
+
+	// Clean up preview object URL
+	useEffect(() => {
+		return () => {
+			if (newImgFile) URL.revokeObjectURL(previewSrc);
+		};
+	}, [newImgFile, previewSrc]);
+
+	if (loading) return <p>Loading...</p>;
 
 	return (
 		<div className="manageBio dashboardContent">

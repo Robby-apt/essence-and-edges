@@ -3,6 +3,15 @@ import { useState, ChangeEvent } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import categoriesList from './categoriesList';
 
+// Helper to create URL-friendly slugs
+function slugify(text: string) {
+	return text
+		.toLowerCase()
+		.trim()
+		.replace(/[^\w\s-]/g, '') // remove special chars
+		.replace(/\s+/g, '-'); // spaces → hyphens
+}
+
 export default function NewPost() {
 	const [title, setTitle] = useState('');
 	const [category, setCategory] = useState(categoriesList[0].value);
@@ -22,23 +31,28 @@ export default function NewPost() {
 
 		if (!imageFile) return alert('Please select an image');
 
+		// Upload image to Supabase storage
 		const path = `blogs/${Date.now()}-${imageFile.name}`;
-
-		const { data, error } = await supabase.storage
+		const { data: uploadData, error: uploadError } = await supabase.storage
 			.from('images')
 			.upload(path, imageFile);
 
-		if (error) return alert(error.message);
+		if (uploadError) return alert(uploadError.message);
 
 		const { data: urlData } = supabase.storage
 			.from('images')
-			.getPublicUrl(data.path);
+			.getPublicUrl(uploadData.path);
 
+		// Generate slug from title
+		const blog_slug = slugify(title);
+
+		// Save blog in Supabase
 		const res = await fetch('/api/blogs', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				blog_title: title,
+				blog_slug,
 				blog_img: urlData.publicUrl,
 				blog_category: category,
 				blog_upload_date: date,
@@ -49,7 +63,10 @@ export default function NewPost() {
 		if (res.ok) {
 			alert('Post created');
 			resetForm();
-		} else alert('Error creating post');
+		} else {
+			const errorData = await res.json();
+			alert('Error creating post: ' + errorData.error);
+		}
 	}
 
 	function resetForm() {

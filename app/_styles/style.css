@@ -789,9 +789,50 @@ footer p {
   margin: auto 1.25rem;
 }
 .blogListDisplay .articleRow img {
+  margin: 0 1.25rem 0 0;
   -o-object-fit: contain;
      object-fit: contain;
   width: 15%;
+}
+.blogListDisplay .articleRow h4 {
+  color: #675139;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: auto auto auto 0;
+}
+.blogListDisplay .articleRow .manageBtns {
+  display: flex;
+  margin: auto 1.25rem auto 0;
+}
+.blogListDisplay .articleRow .manageBtns a,
+.blogListDisplay .articleRow .manageBtns button {
+  border: none;
+  display: flex;
+  margin-left: 1.25rem;
+  padding: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.blogListDisplay .articleRow .manageBtns a:hover,
+.blogListDisplay .articleRow .manageBtns button:hover {
+  background: none;
+  cursor: pointer;
+}
+.blogListDisplay .articleRow .manageBtns a svg,
+.blogListDisplay .articleRow .manageBtns button svg {
+  margin: auto 0;
+}
+.blogListDisplay .articleRow .manageBtns a svg {
+  color: #81705d;
+}
+.blogListDisplay .articleRow .manageBtns a svg:hover {
+  color: #675139;
+}
+.blogListDisplay .articleRow .manageBtns button svg {
+  color: rgba(255, 0, 0, 0.8);
+}
+.blogListDisplay .articleRow .manageBtns button svg:hover {
+  color: red;
 }
 .blogListDisplay .noPost {
   color: #f5f1e5;
@@ -956,4 +997,12 @@ footer p {
 }
 .blogArticle .blogBody p {
   margin: 0 1.25rem 1.25rem;
+}
+
+.categoryPage {
+  background-color: aqua;
+}
+.categoryPage h2 {
+  margin: 1.25rem auto;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

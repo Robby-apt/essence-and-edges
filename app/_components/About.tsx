@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import SocialIcons from './SocialIcons';
 
 export default function About() {
@@ -24,9 +25,9 @@ export default function About() {
 					nunc. Enim proin ultrices sed ac convallis...
 				</p>
 
-				<a href="#" className="moreIntro">
+				<Link href="/about-me" className="moreIntro">
 					Get to know me
-				</a>
+				</Link>
 
 				<SocialIcons />
 			</div>
