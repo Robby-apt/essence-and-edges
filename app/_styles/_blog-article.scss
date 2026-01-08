@@ -9,6 +9,7 @@
 		position: relative;
 		width: calc(100% - 2.5rem);
 		height: 31.25rem;
+		z-index: 1 !important;
 
 		img {
 			margin: auto;
@@ -16,6 +17,7 @@
 			object-position: center;
 			// width: 40%;
 			height: 100%;
+			z-index: 1 !important;
 		}
 
 		.blogDate {
@@ -47,8 +49,8 @@
 			margin: 1.25rem;
 		}
 
-        p{
-            margin: 0 1.25rem 1.25rem;
-        }
+		p {
+			margin: 0 1.25rem 1.25rem;
+		}
 	}
 }

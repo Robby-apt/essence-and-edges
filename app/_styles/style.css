@@ -25,7 +25,7 @@ nav {
   position: fixed;
   width: 100%;
   height: 6.5rem;
-  z-index: 2;
+  z-index: 3;
 }
 nav .navIcon {
   display: none;
@@ -67,6 +67,7 @@ nav a h1:hover {
   padding: 0;
   min-height: 100% !important;
   width: 14.8125rem;
+  z-index: 2;
 }
 .sideBar ul,
 .sideBarResponsive ul {
@@ -124,7 +125,6 @@ footer p {
 }
 
 .heroSection {
-  background-image: url("/hero-bg.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -962,6 +962,7 @@ footer p {
   position: relative;
   width: calc(100% - 2.5rem);
   height: 31.25rem;
+  z-index: 1 !important;
 }
 .blogArticle .blogHero img {
   margin: auto;
@@ -970,6 +971,7 @@ footer p {
   -o-object-position: center;
      object-position: center;
   height: 100%;
+  z-index: 1 !important;
 }
 .blogArticle .blogHero .blogDate {
   background-color: #675139;

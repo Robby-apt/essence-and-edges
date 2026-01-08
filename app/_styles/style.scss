@@ -33,7 +33,7 @@ nav {
 	position: fixed;
 	width: 100%;
 	height: 6.5rem;
-	z-index: 2;
+	z-index: 3;
 
 	.navIcon {
 		// background-color: aqua;
@@ -85,6 +85,7 @@ nav {
 	min-height: 100% !important;
 	// width: fit-content !important;
 	width: 14.8125rem;
+	z-index: 2;
 
 	ul {
 		// background-color: $font-color;
