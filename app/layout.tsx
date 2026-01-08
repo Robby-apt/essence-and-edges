@@ -26,20 +26,7 @@ export const metadata: Metadata = {
 	title: 'Essence and Edges',
 	description: 'Essence and Edges - a blog about the things I enjoy.',
 	icons: {
-		icon: [
-			{
-				url: '/logo.png',
-				media: '(prefers-color-scheme: light)',
-			},
-			{
-				url: '/logo.png',
-				media: '(prefers-color-scheme: dark)',
-			},
-			{
-				url: '/logo.png',
-				type: 'image/svg+xml',
-			},
-		],
+		icon: [{ url: '/logo.ico' }, { url: '/logo.png', type: 'image/png' }],
 		apple: '/apple-icon.png',
 	},
 };
