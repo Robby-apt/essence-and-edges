@@ -8,13 +8,13 @@ import {
 export default function SocialIcons() {
 	return (
 		<div className="socialIcons">
-			<a href="#" aria-label="YouTube">
+			<a href="#" target="_blank" aria-label="YouTube">
 				<FontAwesomeIcon icon={faYoutube} />
 			</a>
-			<a href="#" aria-label="X / Twitter">
+			<a href="#" target="_blank" aria-label="X / Twitter">
 				<FontAwesomeIcon icon={faXTwitter} />
 			</a>
-			<a href="#" aria-label="Instagram">
+			<a href="#" target="_blank" aria-label="Instagram">
 				<FontAwesomeIcon icon={faInstagram} />
 			</a>
 		</div>

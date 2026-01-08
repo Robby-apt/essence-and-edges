@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase/client';
+import Link from 'next/link';
 import { articles as fallback_articles } from './props/articles';
 import ArticleCard from './ArticleCard';
 
@@ -67,7 +68,7 @@ export default function Articles() {
 			</div>
 
 			<div className="moreArticles">
-				<a href="/blog">See more articles →</a>
+				<Link href="/the-office-edit">See more articles →</Link>
 			</div>
 		</section>
 	);

@@ -999,10 +999,21 @@ footer p {
   margin: 0 1.25rem 1.25rem;
 }
 
-.categoryPage {
-  background-color: aqua;
+.categoryPage .categoryTitle {
+  background-color: #b2a793;
+  display: flex;
+  margin: 1.25rem;
 }
-.categoryPage h2 {
-  margin: 1.25rem auto;
+.categoryPage .categoryTitle h2 {
+  color: #f5f1e5;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0.625rem auto;
   text-align: center;
+}
+.categoryPage .blogArticleGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin: 0 1.25rem 1.25rem;
 }/*# sourceMappingURL=style.css.map */

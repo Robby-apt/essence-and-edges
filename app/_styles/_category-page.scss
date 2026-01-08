@@ -1,8 +1,22 @@
 .categoryPage {
-	background-color: aqua;
+	.categoryTitle {
+		background-color: $accent-color;
+		display: flex;
+		margin: 1.25rem;
 
-	h2 {
-		margin: 1.25rem auto;
-		text-align: center;
+		h2 {
+			color: $secondary-bg-color;
+			font-weight: bold;
+			font-size: 2rem;
+			margin: 0.625rem auto;
+			text-align: center;
+		}
+	}
+
+	.blogArticleGrid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.25rem;
+		margin: 0 1.25rem 1.25rem;
 	}
 }
