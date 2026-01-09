@@ -503,7 +503,7 @@ footer p {
        object-fit: contain !important;
     -o-object-position: center !important;
        object-position: center !important;
-    width: 31.25rem !important;
+    width: 500px !important;
     min-width: none !important;
   }
   .notFound div h2 {
