@@ -503,7 +503,6 @@ footer p {
        object-fit: contain !important;
     -o-object-position: center !important;
        object-position: center !important;
-    width: 500px !important;
     min-width: none !important;
   }
   .notFound div h2 {
@@ -966,7 +965,7 @@ footer p {
   min-width: 500px;
 }
 .notFound div img {
-  margin: 1.25rem;
+  margin: 1.25rem auto;
   width: 90%;
   height: 50%;
   -o-object-fit: contain;
