@@ -9,7 +9,7 @@ import ArticleCard from './ArticleCard';
 type Blog = {
 	id: number;
 	blog_title: string;
-	blog_category: string;
+	// blog_category: string;
 	blog_slug: string;
 	blog_upload_date: string;
 	blog_img: string | null;
@@ -51,12 +51,13 @@ export default function Articles() {
 							key={blog.id}
 							article={{
 								title: blog.blog_title,
-								category: blog.blog_category,
+								// category: blog.blog_category,
 								date: new Date(
 									blog.blog_upload_date
 								).toLocaleDateString(),
 								img: blog.blog_img || '/author.jpg',
-								readMoreLink: `/${blog.blog_category}/${blog.blog_slug}`,
+								// readMoreLink: `/${blog.blog_category}/${blog.blog_slug}`,
+								readMoreLink: `/${blog.blog_slug}`,
 							}}
 						/>
 					))
