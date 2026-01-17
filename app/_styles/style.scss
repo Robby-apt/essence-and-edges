@@ -27,42 +27,81 @@ body {
 nav {
 	background-color: $secondary-bg-color;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	// padding: 0.625rem 0;
 	text-align: center;
-	position: fixed;
+	position: sticky;
 	width: 100%;
-	height: 6.5rem;
+	// height: 6.5rem;
 	z-index: 3;
 
-	.navIcon {
-		// background-color: aqua;
-		display: none;
-		width: 6.25rem;
+	// .navIcon {
+	// 	// background-color: aqua;
+	// 	display: none;
+	// 	width: 6.25rem;
 
-		svg {
-			color: $font-color;
-			font-size: 2rem;
-			margin: auto;
+	// 	svg {
+	// 		color: $font-color;
+	// 		font-size: 2rem;
+	// 		margin: auto;
+	// 	}
+	// }
+
+	.quoteDisplay {
+		background-color: $accent-color;
+		display: flex;
+
+		p {
+			color: $secondary-bg-color;
+			font-size: 1.25rem;
+			font-weight: bolder;
+			margin: 0.625rem auto 0.625rem 1.25rem;
+			// padding: 0 1.25rem;
 		}
 	}
 
-	a {
-		text-decoration: none;
-		margin: auto;
-		padding: 0;
+	.titleAndNav {
+        display: flex;
+        margin: 0 1.25rem;
+        justify-content: space-between;
 
-		h1 {
-			color: $font-color;
-			margin: 0;
-			font-size: 4rem;
-			font-weight: bold;
+		a {
+			text-decoration: none;
+			// margin: auto;
+			padding: 0;
 
-			&:hover {
-				color: #81705d;
-				// text-decoration: underline;
+			h1 {
+				color: $font-color;
+				margin: 0;
+				font-size: 4rem;
+				font-weight: bold;
+
+				&:hover {
+					color: #81705d;
+					// text-decoration: underline;
+				}
 			}
 		}
+
+        .navLinks{
+            margin: auto 0;
+
+            a{
+                color: $font-color;
+                font-size: 1.25rem;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:not(:last-child){
+                    margin-right: 1.25rem;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
 	}
 }
 
@@ -70,7 +109,7 @@ nav {
 .contentSection {
 	display: flex;
 	position: relative;
-	margin: 6.5rem 0 0 0;
+	// margin: 6.5rem 0 0 0;
 	/* allow content section to grow and fill available vertical space */
 	flex: 1 1 auto;
 	width: 100%;

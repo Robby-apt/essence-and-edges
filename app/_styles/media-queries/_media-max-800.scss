@@ -56,14 +56,14 @@
 	.notFound {
 		div {
 			margin: 1.25rem;
-			width: calc(100% - 2.5rem) !important;
+			width: 300px !important;
 			min-width: none !important;
 
 			img {
 				// background-color: aqua;
 				object-fit: contain !important;
 				object-position: center !important;
-				// width: 80% !important;
+				width: 300px !important;
 				min-width: none !important;
 			}
 

@@ -14,7 +14,7 @@ function slugify(text: string) {
 
 export default function NewPost() {
 	const [title, setTitle] = useState('');
-	const [category, setCategory] = useState(categoriesList[0].value);
+	// const [category, setCategory] = useState(categoriesList[0].value);
 	const [date, setDate] = useState('');
 	const [content, setContent] = useState('');
 	const [imageFile, setImageFile] = useState<File | null>(null);
@@ -54,7 +54,7 @@ export default function NewPost() {
 				blog_title: title,
 				blog_slug,
 				blog_img: urlData.publicUrl,
-				blog_category: category,
+				// blog_category: category,
 				blog_upload_date: date,
 				blog_post: content,
 			}),
@@ -71,7 +71,7 @@ export default function NewPost() {
 
 	function resetForm() {
 		setTitle('');
-		setCategory(categoriesList[0].value);
+		// setCategory(categoriesList[0].value);
 		setDate('');
 		setContent('');
 		setImageFile(null);
@@ -104,7 +104,7 @@ export default function NewPost() {
 					/>
 				</div>
 
-				<div className="blogInput">
+				{/* <div className="blogInput">
 					<label>Category:</label>
 					<select
 						value={category}
@@ -116,7 +116,7 @@ export default function NewPost() {
 							</option>
 						))}
 					</select>
-				</div>
+				</div> */}
 
 				<div className="blogInput">
 					<label>Date:</label>

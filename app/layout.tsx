@@ -8,9 +8,9 @@ config.autoAddCss = false;
 import './_styles/style.css';
 import Navbar from './_components/Navbar';
 import Footer from './_components/Footer';
-import Sidebar from './_components/Sidebar'; // Desktop
-import SidebarResponsive from './_components/SidebarResponsive'; // Mobile
-import { SidebarProvider } from './_providers/SidebarProvider';
+// import Sidebar from './_components/Sidebar';
+// import SidebarResponsive from './_components/SidebarResponsive';
+// import { SidebarProvider } from './_providers/SidebarProvider';
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -41,19 +41,18 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<SidebarProvider>
+				{/* <SidebarProvider> */}
 					<div className="fullPage">
 						<Navbar />
 						<div className="contentSection">
 							{/* Both sidebars rendered, CSS controls visibility */}
-							<Sidebar /> {/* Desktop - always in DOM */}
-							<SidebarResponsive />{' '}
-							{/* Mobile - conditionally rendered */}
+							{/* <Sidebar />
+							<SidebarResponsive /> */}
 							<main>{children}</main>
 						</div>
 						<Footer />
 					</div>
-				</SidebarProvider>
+				{/* </SidebarProvider> */}
 			</body>
 		</html>
 	);

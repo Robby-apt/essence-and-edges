@@ -7,7 +7,7 @@ import ArticleCard from '@/app/_components/ArticleCard';
 type Blog = {
 	id: number;
 	blog_title: string;
-	blog_category: string;
+	// blog_category: string;
 	blog_upload_date: string | null;
 	blog_img: string | null;
 	blog_slug: string;
@@ -22,7 +22,8 @@ export default function AllBlogs() {
 			const { data, error } = await supabase
 				.from('blogs')
 				.select(
-					'id, blog_title, blog_category, blog_upload_date, blog_img, blog_slug'
+					// 'id, blog_title, blog_category, blog_upload_date, blog_img, blog_slug'
+					'id, blog_title, blog_upload_date, blog_img, blog_slug'
 				)
 				.order('blog_upload_date', { ascending: false });
 
@@ -51,14 +52,15 @@ export default function AllBlogs() {
 							key={blog.id}
 							article={{
 								title: blog.blog_title,
-								category: blog.blog_category,
+								// category: blog.blog_category,
 								date: blog.blog_upload_date
 									? new Date(
 											blog.blog_upload_date
 									  ).toLocaleDateString('en-GB')
 									: 'Recent',
 								img: blog.blog_img || '/author.jpg',
-								readMoreLink: `/${blog.blog_category}/${blog.blog_slug}`,
+								// readMoreLink: `/${blog.blog_category}/${blog.blog_slug}`,
+								readMoreLink: `/${blog.blog_slug}`,
 							}}
 						/>
 					))

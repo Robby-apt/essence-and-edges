@@ -1,4 +1,5 @@
 'use client';
+
 import { useState, ChangeEvent, useEffect } from 'react';
 import { supabase } from '@/lib/supabase/client';
 
@@ -39,14 +40,14 @@ export default function ManageBio() {
 	async function handleBioSubmit(e: React.FormEvent) {
 		e.preventDefault();
 
-		let imageUrl = currentImgUrl;
+		let imageUrl = currentImgUrl || '';
 
 		if (newImgFile) {
 			const filePath = `bio/${Date.now()}-${newImgFile.name}`;
 
 			const { data, error } = await supabase.storage
 				.from('images')
-				.upload(filePath, newImgFile, { upsert: true });
+				.upload(filePath, newImgFile);
 
 			if (error) return alert(error.message);
 
@@ -84,10 +85,11 @@ export default function ManageBio() {
 		? URL.createObjectURL(newImgFile)
 		: currentImgUrl || '/author.jpg';
 
-	// Clean up preview object URL
 	useEffect(() => {
 		return () => {
-			if (newImgFile) URL.revokeObjectURL(previewSrc);
+			if (newImgFile) {
+				URL.revokeObjectURL(previewSrc);
+			}
 		};
 	}, [newImgFile, previewSrc]);
 

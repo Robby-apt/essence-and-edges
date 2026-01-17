@@ -1,8 +1,17 @@
 @media (max-width: 1130px) {
 	nav {
-		.navIcon {
-			display: flex;
-		}
+		// .navIcon {
+		// 	display: flex;
+		// }
+
+        .titleAndNav {
+            flex-direction: column;
+            align-items: center;
+
+            .navLinks {
+                margin: 0.625rem;
+            }
+        }
 	}
 
 	.sideBar {

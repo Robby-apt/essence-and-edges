@@ -39,7 +39,7 @@ export default function ArticleRow({ blog, onDelete }: Props) {
 			<h4>{blog.blog_title}</h4>
 
 			<div className="manageBtns">
-				<Link href={`/admin/edit/${blog.id}`}>
+				<Link href={`/admin/dashboard/edit/${blog.id}`}>
 					<FontAwesomeIcon icon={faPen} />
 				</Link>
 				<button onClick={handleDelete}>

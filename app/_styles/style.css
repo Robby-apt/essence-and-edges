@@ -20,41 +20,60 @@ body {
 nav {
   background-color: #f5f1e5;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  position: fixed;
+  position: sticky;
   width: 100%;
-  height: 6.5rem;
   z-index: 3;
 }
-nav .navIcon {
-  display: none;
-  width: 6.25rem;
+nav .quoteDisplay {
+  background-color: #b2a793;
+  display: flex;
 }
-nav .navIcon svg {
-  color: #675139;
-  font-size: 2rem;
-  margin: auto;
+nav .quoteDisplay p {
+  color: #f5f1e5;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  margin: 0.625rem auto 0.625rem 1.25rem;
 }
-nav a {
+nav .titleAndNav {
+  display: flex;
+  margin: 0 1.25rem;
+  justify-content: space-between;
+}
+nav .titleAndNav a {
   text-decoration: none;
-  margin: auto;
   padding: 0;
 }
-nav a h1 {
+nav .titleAndNav a h1 {
   color: #675139;
   margin: 0;
   font-size: 4rem;
   font-weight: bold;
 }
-nav a h1:hover {
+nav .titleAndNav a h1:hover {
   color: #81705d;
+}
+nav .titleAndNav .navLinks {
+  margin: auto 0;
+}
+nav .titleAndNav .navLinks a {
+  color: #675139;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav .titleAndNav .navLinks a:not(:last-child) {
+  margin-right: 1.25rem;
+}
+nav .titleAndNav .navLinks a:hover {
+  text-decoration: underline;
 }
 
 .contentSection {
   display: flex;
   position: relative;
-  margin: 6.5rem 0 0 0;
   /* allow content section to grow and fill available vertical space */
   flex: 1 1 auto;
   width: 100%;
@@ -224,8 +243,8 @@ footer p {
   display: flex;
   color: #675139;
   justify-content: space-around;
-  margin: 1.25rem 0 0.625rem;
-  width: 100%;
+  margin: 1.25rem auto 0.625rem;
+  width: 50%;
 }
 .socialIcons a {
   color: inherit;
@@ -495,7 +514,7 @@ footer p {
   }
   .notFound div {
     margin: 1.25rem;
-    width: calc(100% - 2.5rem) !important;
+    width: 300px !important;
     min-width: none !important;
   }
   .notFound div img {
@@ -503,6 +522,7 @@ footer p {
        object-fit: contain !important;
     -o-object-position: center !important;
        object-position: center !important;
+    width: 300px !important;
     min-width: none !important;
   }
   .notFound div h2 {
@@ -512,8 +532,12 @@ footer p {
   }
 }
 @media (max-width: 1130px) {
-  nav .navIcon {
-    display: flex;
+  nav .titleAndNav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav .titleAndNav .navLinks {
+    margin: 0.625rem;
   }
   .sideBar {
     display: none;
