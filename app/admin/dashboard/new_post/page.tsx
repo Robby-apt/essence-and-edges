@@ -1,4 +1,5 @@
 'use client';
+
 import { useState, ChangeEvent } from 'react';
 import { supabase } from '@/lib/supabase/client';
 import categoriesList from './categoriesList';
@@ -33,9 +34,13 @@ export default function NewPost() {
 
 		// Upload image to Supabase storage
 		const path = `blogs/${Date.now()}-${imageFile.name}`;
+
 		const { data: uploadData, error: uploadError } = await supabase.storage
 			.from('images')
-			.upload(path, imageFile);
+			.upload(path, imageFile, {
+				upsert: true,
+				contentType: imageFile.type, // ✅ FIX: prevents octet-stream error
+			});
 
 		if (uploadError) return alert(uploadError.message);
 
@@ -43,8 +48,8 @@ export default function NewPost() {
 			.from('images')
 			.getPublicUrl(uploadData.path);
 
-		// Generate slug from title
-		const blog_slug = slugify(title);
+		// Generate slug from title (avoid duplicates)
+		const blog_slug = `${slugify(title)}-${Date.now()}`;
 
 		// Save blog in Supabase
 		const res = await fetch('/api/blogs', {

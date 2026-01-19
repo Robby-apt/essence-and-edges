@@ -72,7 +72,10 @@ export default function EditBlog() {
 
 			const { error: upload_error } = await supabase.storage
 				.from('images')
-				.upload(file_path, image_file);
+				.upload(file_path, image_file, {
+					upsert: true,
+					contentType: image_file.type, // ✅ FIX: prevents octet-stream error
+				});
 
 			if (upload_error) {
 				alert(upload_error.message);

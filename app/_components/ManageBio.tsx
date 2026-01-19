@@ -47,7 +47,10 @@ export default function ManageBio() {
 
 			const { data, error } = await supabase.storage
 				.from('images')
-				.upload(filePath, newImgFile);
+				.upload(filePath, newImgFile, {
+					upsert: true,
+					contentType: newImgFile.type,
+				});
 
 			if (error) return alert(error.message);
 
@@ -57,6 +60,7 @@ export default function ManageBio() {
 
 			imageUrl = urlData.publicUrl;
 		}
+
 
 		const res = await fetch('/api/bio', {
 			method: 'POST',
