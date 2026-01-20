@@ -24,7 +24,7 @@ export default function Articles() {
 			const { data, error } = await supabase
 				.from('blogs')
 				.select(
-					'id, blog_title, blog_category, blog_slug, blog_upload_date, blog_img'
+					'id, blog_title, blog_category, blog_slug, blog_upload_date, blog_img',
 				)
 				.order('blog_upload_date', { ascending: false })
 				.limit(3);
@@ -51,19 +51,27 @@ export default function Articles() {
 							key={blog.id}
 							article={{
 								title: blog.blog_title,
-								// category: blog.blog_category,
 								date: new Date(
-									blog.blog_upload_date
+									blog.blog_upload_date,
 								).toLocaleDateString(),
 								img: blog.blog_img || '/author.jpg',
-								// readMoreLink: `/${blog.blog_category}/${blog.blog_slug}`,
-								readMoreLink: `/${blog.blog_slug}`,
+
+								// ✅ pass slug only
+								slug: blog.blog_slug,
 							}}
 						/>
 					))
 				) : (
 					fallback_articles.map((article) => (
-						<ArticleCard key={article.id} article={article} />
+						<ArticleCard
+							key={article.id}
+							article={{
+								title: article.title,
+								date: article.date,
+								img: article.img,
+								slug: article.readMoreLink || String(article.id),
+							}}
+						/>
 					))
 				)}
 			</div>

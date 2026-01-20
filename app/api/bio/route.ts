@@ -8,13 +8,14 @@ export async function POST(req: NextRequest) {
 		const supabase = await createSupabaseServerClient();
 
 		const { error } = await supabase.from('bio').upsert({
-			id: true, // singleton row
+			id: 1, // ✅ fixed singleton row
 			bio_img,
 			bio_text,
 			updated_at: new Date().toISOString(),
 		});
 
 		if (error) {
+			console.error('BIO UPSERT ERROR:', error);
 			return NextResponse.json({ error: error.message }, { status: 400 });
 		}
 
@@ -22,9 +23,10 @@ export async function POST(req: NextRequest) {
 			message: 'Bio updated successfully',
 		});
 	} catch (err) {
+		console.error('BIO API ERROR:', err);
 		return NextResponse.json(
 			{ error: 'Internal server error' },
-			{ status: 500 }
+			{ status: 500 },
 		);
 	}
 }

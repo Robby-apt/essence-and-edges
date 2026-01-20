@@ -1089,4 +1089,11 @@ footer p {
 .categoryPage .blogArticleGrid .noBlogs {
   grid-column: 1/span 4;
   text-align: center;
+}
+.categoryPage .blogArticleGrid .articleCard {
+  height: 15.625rem;
+  min-width: 300px;
+}
+.categoryPage .blogArticleGrid .articleCard img {
+  height: 50%;
 }/*# sourceMappingURL=style.css.map */

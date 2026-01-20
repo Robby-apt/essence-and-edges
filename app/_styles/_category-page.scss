@@ -23,5 +23,14 @@
 			grid-column: 1 / span 4;
 			text-align: center;
 		}
+
+        .articleCard{
+            height: 15.625rem;
+            min-width: 300px;
+
+            img{
+                height: 50%;
+            }
+        }
 	}
 }
