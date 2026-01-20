@@ -9,11 +9,11 @@ export default function AdminRoot() {
 
 	useEffect(() => {
 		const run = async () => {
-			const { data, error } = await supabase.auth.getSession();
+			const {
+				data: { session },
+			} = await supabase.auth.getSession();
 
-			console.log('Session check:', data.session);
-
-			if (data.session) {
+			if (session) {
 				router.replace('/admin/dashboard');
 			} else {
 				router.replace('/admin/login');

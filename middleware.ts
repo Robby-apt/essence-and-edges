@@ -16,7 +16,7 @@ export async function middleware(req: NextRequest) {
 				set() {},
 				remove() {},
 			},
-		}
+		},
 	);
 
 	const {
@@ -25,19 +25,15 @@ export async function middleware(req: NextRequest) {
 
 	const pathname = req.nextUrl.pathname;
 
-	// ✅ Allow login page without auth
-	if (pathname === '/admin/login') {
+	// 🔓 completely public admin routes
+	if (pathname === '/admin/login' || pathname === '/admin/reset-password') {
 		return res;
 	}
 
-	// ✅ Protect everything else under /admin
+	// 🔒 protect admin pages
 	if (pathname.startsWith('/admin') && !session) {
 		return NextResponse.redirect(new URL('/admin/login', req.url));
 	}
 
 	return res;
 }
-
-export const config = {
-	matcher: ['/admin/:path*'],
-};

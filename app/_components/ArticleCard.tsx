@@ -5,10 +5,15 @@ type Article = {
 	// category: string;
 	date: string;
 	img: string;
-	slug: string;
+	slug?: string;
+	readMoreLink?: string;
 };
 
 export default function ArticleCard({ article }: { article: Article }) {
+	const href =
+		article.readMoreLink ??
+		(article.slug ? `/all-blogs/${article.slug}` : '#');
+
 	return (
 		<div className="articleCard">
 			<img src={article.img} alt="" />
@@ -19,7 +24,7 @@ export default function ArticleCard({ article }: { article: Article }) {
 
 			<p className="article-date">{article.date}</p>
 
-			<Link href={`/all-blogs/${article.slug}`} className="read-more">
+			<Link href={href} className="read-more">
 				Read more
 			</Link>
 		</div>

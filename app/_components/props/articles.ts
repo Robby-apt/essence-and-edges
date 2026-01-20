@@ -1,4 +1,4 @@
-// app/_components/props/articles.js
+// app/_components/props.js
 export const articles = [
 	{
 		id: 1,
@@ -6,7 +6,7 @@ export const articles = [
 		title: 'Investing in Money Market Funds',
 		category: 'Under Open Skies',
 		date: '3rd Nov 2025',
-		readMoreLink: '/articles/investing-money-market-funds',
+		readMoreLink: '/investing-money-market-funds',
 	},
 	{
 		id: 2,
@@ -14,7 +14,7 @@ export const articles = [
 		title: 'Making Friends as an Adult',
 		category: 'Under Open Skies',
 		date: '3rd Nov 2025',
-		readMoreLink: '/articles/making-friends-adult',
+		readMoreLink: '/making-friends-adult',
 	},
 	{
 		id: 3,
@@ -22,6 +22,6 @@ export const articles = [
 		title: 'Simple Art Projects for Beginners',
 		category: 'Under Open Skies',
 		date: '3rd Nov 2025',
-		readMoreLink: '/articles/simple-art-projects',
+		readMoreLink: '/simple-art-projects',
 	},
 ];
