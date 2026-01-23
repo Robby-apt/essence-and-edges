@@ -506,11 +506,11 @@ footer p {
     margin: 1.25rem auto;
   }
   .blogArticleGrid {
-    grid-template-columns: repeat(1, 1fr) !important;
-    gap: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
   .blogArticleGrid .noBlogs {
-    grid-column: 1/span 1 !important;
+    width: 100%;
   }
   .notFound div {
     margin: 1.25rem;
