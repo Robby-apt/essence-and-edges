@@ -24,13 +24,19 @@
 			text-align: center;
 		}
 
-        .articleCard{
-            height: 15.625rem;
-            min-width: 300px;
+		.articleCard {
+			display: flex;
+			flex-direction: column;
+			height: 20rem;
+			min-width: 300px;
 
-            img{
-                height: 50%;
-            }
-        }
+			img {
+				height: 50%;
+			}
+
+			.readMore {
+				margin: auto auto 0.625rem 0.625rem !important;
+			}
+		}
 	}
 }

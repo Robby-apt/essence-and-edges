@@ -24,7 +24,7 @@ export default function ArticleCard({ article }: { article: Article }) {
 
 			<p className="article-date">{article.date}</p>
 
-			<Link href={href} className="read-more">
+			<Link href={href} className="readMore">
 				Read more
 			</Link>
 		</div>

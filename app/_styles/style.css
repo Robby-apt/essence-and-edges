@@ -510,7 +510,7 @@ footer p {
     flex-direction: column !important;
   }
   .blogArticleGrid .noBlogs {
-    width: 100%;
+    width: calc(100% - 2.5rem) !important;
   }
   .notFound div {
     margin: 1.25rem;
@@ -602,7 +602,7 @@ footer p {
   .articleCard {
     width: 100% !important;
     min-width: none;
-    height: 30rem !important;
+    max-height: 30rem !important;
     padding: 0.625rem 0 !important;
   }
   .articleCard img {
@@ -1091,9 +1091,14 @@ footer p {
   text-align: center;
 }
 .categoryPage .blogArticleGrid .articleCard {
-  height: 15.625rem;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
   min-width: 300px;
 }
 .categoryPage .blogArticleGrid .articleCard img {
   height: 50%;
+}
+.categoryPage .blogArticleGrid .articleCard .readMore {
+  margin: auto auto 0.625rem 0.625rem !important;
 }/*# sourceMappingURL=style.css.map */
